@@ -20,15 +20,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/#####.git"
+    "url": "git+https://github.com/daranda-rai/challenge.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com//#####"
+    "url": "https://github.com/daranda-rai/challenge"
   },
-  "homepage": "https://github.com//#####",
+  "homepage": "https://github.com/daranda-rai/challenge",
   "devDependencies": {
     "@playwright/test": "^1.33.0",
     "eslint": "^8.14.0",
