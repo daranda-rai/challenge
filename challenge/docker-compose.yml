@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: npm run test:docker:${TEST_LEVEL}:${TEST_BROWSER}
+    environment:
+      - TEST_LEVEL=${TEST_LEVEL}
+      - TEST_BROWSER=${TEST_BROWSER}
+    env_file:
+      - .env
+    volumes:
+      - ./test-results:/test-results
+      - ./allure-report:/allure-report
+      - ./allure-results:/allure-results
+      
