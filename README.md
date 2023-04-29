@@ -15,28 +15,45 @@ ESLint
 - Clone the project:
 
 ```git
-git clone https://github.com/#####.git
+git clone https://github.com/daranda-rai/challenge.git
 ```
 
 - Install the dependencies:
 
+```
+ (might need to restart ide/terminal after)
+https://nodejs.org/en/download
+```
+
 ```npm
 npm install
 ```
-Followed by the following command in order to download the browsers playwright uses for the tests:
+- Download the browsers playwright uses for the tests:
 
 ```npm
 npx playwright install
 ```
+- Install allure for reporting
 
-- In order to run the tests sucessfully, you need to set the data required in the **`.env`**. Use the **`.env.template`** as an example.
+```
+https://docs.qameta.io/allure/#_installing_a_commandline
+```
 
-- You can run the tests locally with or without docker, just pick up one of the scripts bellow.
+
+In order to run the tests sucessfully, you need to set the data required in the **`.env`**. Use the **`.env.template`** as an example.
+
+For the challenge, the necessary **`.env`** is provided already
+
 
 ## Available scripts
 
-- In case you want to run all tests locally (without Docker) and then execute one of the scripts bellow (headless or non headless mode) to run the tests:
-- By default tests will run on chromium, you can also run on firefox and safari e.g. test:local:safari (check package.json for all commands)
+- You can run the tests locally with or without docker, just pick up one of the scripts bellow.
+
+In case you want to run tests locally (without Docker) execute one of the scripts bellow to run the tests
+
+By default tests will run on chromium, you can also run on firefox and safari e.g. test:local:safari (check package.json for all commands)
+
+*NOTE!!!* For windows we must first set debug in the environment **`$env:DEBUG="pw:api"`**(in the terminal) and then run manually the commands from package.json e.g. **`npx playwright test --headed --project=chromium`**
 
 ```npm
 npm run test:local
@@ -46,7 +63,7 @@ npm run test:local
 npm run test:local:headless
 ```
 
-- Run all tests locally with Docker:
+- Run tests locally with Docker:
 
 ```npm
 npm run test:docker:local
@@ -66,9 +83,9 @@ npx run lintfix
 
 ## Debugging
 
-Just add '-- --debug' to the above commands you're running to access playwright debugger.
+- Just add **`--debug`** to the above commands you're running to access playwright debugger.
 
-*NOTE*: Adding '--' before the argument '--debug' is not a typo, npm requires -- to pass the argument, and then the argument is --debug. (if we use Yarn instead of npm we would just be able to do --debug)
+*NOTE*:Might need to add **`--`** before the argument **`--debug`**
 
 ## Reporting
 
