@@ -21,7 +21,7 @@ git clone https://github.com/daranda-rai/challenge.git
 - Install the dependencies:
 
 ```
- (might need to restart ide/terminal after)
+Install Node.js (>=14.17.0) (might need to restart ide/terminal after)
 https://nodejs.org/en/download
 ```
 
