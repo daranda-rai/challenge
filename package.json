@@ -4,16 +4,8 @@
   "description": "Test Automation Challenge",
   "main": "index.js",
   "scripts": {
-    "test:local": "DEBUG=pw:api playwright test --headed --project=chromium",
-    "test:local:firefox": "DEBUG=pw:api playwright test --headed --project=firefox",
-    "test:local:safari": "DEBUG=pw:api playwright test --headed --project=webkit",
-    "test:local:headless": "playwright test --project=chromium",
+    "test:local": "DEBUG=pw:api playwright test",
     "test:docker:local": "./scripts/test-runner.sh",
-    "test:docker:local:firefox": "./scripts/test-runner.sh local firefox",
-    "test:docker:local:safari": "./scripts/test-runner.sh local webkit",
-    "test:docker:all:chrome": "DEBUG=pw:api playwright test --project=chromium",
-    "test:docker:all:firefox": "DEBUG=pw:api playwright test --project=firefox",
-    "test:docker:all:safari": "DEBUG=pw:api playwright test --project=webkit",
     "lint": "eslint .",
     "lintfix": "eslint . --fix",
     "allure-generate": "allure generate ./allure-results --clean && allure open ./allure-report"
@@ -30,10 +22,10 @@
   },
   "homepage": "https://github.com/daranda-rai/challenge",
   "devDependencies": {
-    "@playwright/test": "^1.33.0",
+    "@playwright/test": "^1.36.2",
+    "allure-playwright": "^2.0.0-beta.18",
     "eslint": "^8.14.0",
-    "eslint-plugin-playwright": "^0.12.0",
-    "allure-playwright": "^2.0.0-beta.18"
+    "eslint-plugin-playwright": "^0.12.0"
   },
   "dependencies": {
     "dotenv": "^16.0.3"
