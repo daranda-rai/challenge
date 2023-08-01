@@ -50,16 +50,10 @@ For the challenge, the necessary **`.env`** is provided already
 
 In case you want to run tests locally (without Docker) execute one of the scripts bellow to run the tests
 
-By default tests will run on chromium, you can also run on firefox and safari e.g. test:local:safari (check package.json for all commands)
-
 *NOTE!!!* For windows we must first set debug in the environment **`$env:DEBUG="pw:api"`**(in the terminal) and then run manually the commands from package.json e.g. **`npx playwright test --headed --project=chromium`**
 
 ```npm
 npm run test:local
-```
-
-```npm
-npm run test:local:headless
 ```
 
 - Run tests locally with Docker:
